@@ -1,0 +1,76 @@
+/* index.css o App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.colores{
+  background-color: #efefef;
+
+}
+
+.cabecera {
+  width: auto;
+  height: 100px;
+  display: flex; /* Activa Flexbox */
+  justify-content: space-between; /* Espacia extremos */
+  align-items: center; /* Centra verticalmente */
+  position: relative; /* Para poder centrar el del medio */
+  padding: 1rem;
+}
+
+.img-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.search-icon{
+    cursor: pointer;
+}
+
+.drawer-content{
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Espacia extremos */
+
+  align-items: center; /* Centra verticalmente */
+  position: relative; /* Para poder centrar el del medio */
+  padding: 1rem;
+}
+
+nav{
+   display: flex; /* Activa Flexbox */
+  justify-content: center; /* Espacia extremos */
+  align-items: center; /* Centra verticalmente */
+  position: relative; /* Para poder centrar el del medio */
+  padding: 1rem;
+}
+
+nav {
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;           /* Para que los li estén en línea */
+  gap: 4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  list-style: none;
+  align-items: center; /* Centra verticalmente */
+  position: relative; /* Para poder centrar el del medio */
+
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+  cursor: pointer; /* para que el cursor cambie a mano y se note que es interactivo */
+}
+
+.separador {
+  border-bottom: 2px solid #ccc; /* línea gris clara */
+  margin: 1rem 0; /* espacio arriba y abajo */
+  margin-bottom: 0px;
+}
