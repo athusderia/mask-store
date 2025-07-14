@@ -1,9 +1,18 @@
 .mask-gallery-container {
-  display: grid; /* Activa el modo Grid */
-  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual ancho */
-  gap: 10px; /* Espacio entre las imágenes (filas y columnas) */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
   padding: 20px;
-  max-width: 1200px; /* O el ancho que necesites para tu galería */
-  margin: 0 auto; /* Centra el contenedor */
-  margin-top: 20px;
+  margin: 0 auto;
+    background-color: #efefef;
+
+}
+
+
+.button-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }

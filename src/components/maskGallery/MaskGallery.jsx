@@ -1,8 +1,8 @@
 import { MaskCard } from "../maskCard/MaskCard";
-import mask1 from "../../assets/merch/mask1.png";
-import mask2 from "../../assets/merch/mask2.png";
-import mask3 from "../../assets../../assets/merch/mask3.png";
-import mask4 from "../../assets/merch/mask4.png";
+import mask1 from "../../assets/halloween-masks/h1.jpg"
+import mask2 from "../../assets/halloween-masks/h2.jpg"
+import mask3 from "../../assets/halloween-masks/h3.jpg"
+import mask4 from "../../assets/halloween-masks/h4.jpg"
 import { db } from "../../information/Masks-information";
 import "./MaskGallery.css";
 import { Button } from "../button/Button"
@@ -20,7 +20,8 @@ export const MaskGallery = () => {
   );
 
   return (
-    <div className="mask-gallery-container"> {/* Aquí aplicas el estilo Grid */}
+    <div>
+       <div className="mask-gallery-container"> {/* Aquí aplicas el estilo Grid */}
       {masksToDisplay.map((maskInfo) => (
         <MaskCard className="mask-card-container"
           key={maskInfo.id}
@@ -29,7 +30,13 @@ export const MaskGallery = () => {
           image={maskImages[maskInfo.id]}
         />
       ))}
-      <Button title="View all"></Button>
+
     </div>
+    <div  className="button-centered">
+      <Button title="View All"></Button>
+    </div>
+    </div>
+   
+    
   );
 };

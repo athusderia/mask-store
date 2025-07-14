@@ -5,18 +5,28 @@
   box-sizing: border-box;
 }
 
-.colores{
+/* --- ESTILOS PARA EL HEADER CON COMPORTAMIENTO DE SCROLL --- */
+.colores {
   background-color: #efefef;
-
+  position: fixed; /* Fija el header en la ventana */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  top: 0; /* Por defecto, visible en la parte superior */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  transition: transform 0.1s ease-in-out; /* Transición suave para ocultar/mostrar */
 }
 
+.hide-header {
+  transform: translateY(-100%); /* Oculta el header completamente hacia arriba */
+}
+
+/* --- TUS ESTILOS EXISTENTES (sin cambios mayores, solo se respetan) --- */
 .cabecera {
   width: auto;
-  height: 100px;
-  display: flex; /* Activa Flexbox */
-  justify-content: space-between; /* Espacia extremos */
-  align-items: center; /* Centra verticalmente */
-  position: relative; /* Para poder centrar el del medio */
+  height: 100px; /* Asegúrate que esta altura sea consistente con lo que se oculta */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 2rem;
@@ -28,52 +38,47 @@
   height: 5rem;
 }
 
-.search-icon{
-    cursor: pointer;
+.search-icon {
+  cursor: pointer;
 }
 
-.drawer-content{
-  display: flex; /* Activa Flexbox */
-  justify-content: center; /* Espacia extremos */
-
-  align-items: center; /* Centra verticalmente */
-  position: relative; /* Para poder centrar el del medio */
-  padding: 1rem;
-}
-
-nav{
-   display: flex; /* Activa Flexbox */
-  justify-content: center; /* Espacia extremos */
-  align-items: center; /* Centra verticalmente */
-  position: relative; /* Para poder centrar el del medio */
+.drawer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   padding: 1rem;
 }
 
 nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   padding: 1rem;
 }
 
 nav ul {
-  display: flex;           /* Para que los li estén en línea */
+  display: flex;
   gap: 4rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 nav li {
   list-style: none;
-  align-items: center; /* Centra verticalmente */
-  position: relative; /* Para poder centrar el del medio */
-
+  align-items: center;
+  position: relative;
 }
 
 nav ul li:hover {
   text-decoration: underline;
-  cursor: pointer; /* para que el cursor cambie a mano y se note que es interactivo */
+  cursor: pointer;
 }
 
 .separador {
-  border-bottom: 2px solid #ccc; /* línea gris clara */
-  margin: 1rem 0; /* espacio arriba y abajo */
+  border-bottom: 2px solid #ccc;
+  margin: 1rem 0;
   margin-bottom: 0px;
 }

@@ -1,14 +1,25 @@
 button {
+  position: relative;
   width: 150px;
   height: 40px;
   color: white;
   background-color: black;
-  /* ✨ Recommendation: Use a consistent duration for all transitions for a more unified feel. */
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Changed to 0.2s */
+  border: none;
+  font-size: 1rem;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-button:hover {
-  transform: scale(1.02);
-  background-color: #333; /* Slightly lighter black on hover for visual feedback */
-  cursor: pointer;
+button::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 2px solid white;
+  transition: transform 0.2s ease;
+  transform: scale(1);
+  pointer-events: none; /* Para no interferir con clics */
+}
+
+button:hover::before {
+  transform: scale(1.05); /* Solo crece el borde */
 }

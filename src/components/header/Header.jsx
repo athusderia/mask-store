@@ -1,18 +1,40 @@
 import "./Header.css";
 import logo from "../../assets/merch/horror-logo.png";
 import { Search, ShoppingBag, X } from "lucide-react";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Drawer, Button, Box, TextField } from "@mui/material";
 
 export const Header = () => {
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const [open, setOpen] = useState(false);
   const toggleDrawer = (state) => () => {
     setOpen(state);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < lastScrollY) {
+        setShowHeader(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setShowHeader(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className="colores">
+    <div className={`colores ${showHeader ? "" : "hide-header"}`}>
       <header className="cabecera">
         <div className="left">
           <span
