@@ -1,23 +1,19 @@
 import "./App.css";
 import { Header } from "./components/header/Header";
-import { Mask } from "./components/mask/Mask";
-import { db } from "./information/Masks-information.js";
-import mask1 from "./assets/merch/mask1.png";
+import principalMask from "./assets/merch/principal-mask2.jpg";
+import { PrincipalMask } from "./components/principalMask/PrincipalMask.jsx";
+import {MaskGallery} from "./components/maskGallery/MaskGallery.jsx"
+
 
 function App() {
-  const maskInfo = db.find((mask) => mask.id === 1);
-
   return (
     <>
       <Header />
-      <div className="principal-container">
-        <div className="content">
-          <Mask
-            description={maskInfo.description}
-            price={maskInfo.price}
-            image={mask1}
-          />
-        </div>
+      <div>
+        <PrincipalMask image={principalMask}></PrincipalMask>
+      </div>
+      <div>
+        <MaskGallery></MaskGallery>
       </div>
     </>
   );

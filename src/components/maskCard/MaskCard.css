@@ -1,0 +1,15 @@
+.mask-box{
+    width: 100%;
+    height: 100%;
+}
+
+.img-animada {
+  width: 100%;
+  transition: transform 0.3s ease; /* Suaviza la transformación */
+}
+
+.img-animada:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+

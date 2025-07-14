@@ -44,7 +44,7 @@ export const Header = () => {
 
       <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
         <Box
-          sx={{ height: 150, padding: 2, backgroundColor: "#f0f0f0" }}
+          sx={{ height: 170, padding: 2, backgroundColor: "#f0f0f0" }}
           role="presentation"
         >
           <div className="drawer-content">
