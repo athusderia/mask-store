@@ -26,7 +26,7 @@ export const MaskGallery = () => {
         <MaskCard className="mask-card-container"
           key={maskInfo.id}
           description={maskInfo.description}
-          price={maskInfo.price}
+          price={maskInfo.price} 
           image={maskImages[maskInfo.id]}
         />
       ))}

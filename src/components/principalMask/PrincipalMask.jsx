@@ -1,8 +1,8 @@
-import "./principalMask.css"; // Import as a JS object
+import "./principalMask.css"; 
 
 export const PrincipalMask = ({ image, description }) => {
   return (
-    <div className="principal-mask-box"> {/* Use the class from the styles object */}
+    <div className="principal-mask-box">
       <img src={image} alt={description} className="mask-image" />
     </div>
   );

@@ -1,4 +1,4 @@
-import "./MaskCard.css"
+import "./MaskCard.css";
 
 export const MaskCard = ({ image, description, price }) => {
   return (
@@ -6,7 +6,10 @@ export const MaskCard = ({ image, description, price }) => {
       <div className="mask-box">
         <img className="img-animada" src={image} alt={description} />
       </div>
-      <p className="mask-description">{description} a ${price}</p>
+      <span className="mask-description">
+        <p>{description}</p>
+        <p>${price} USD</p>
+      </span>
     </div>
   );
 };
